@@ -1,0 +1,38 @@
+set terminal kittycairo background rgb 0xFF000000
+
+set border 0
+
+set xrange [-1:1] # Adjust ranges to accommodate scaling and translation
+set yrange [-1:1]
+set zrange [-0.9:1.1]
+
+x(u, v) = cos(u) * cos(v)
+y(u, v) = cos(u) * sin(v)
+z(u, v) = sin(u)
+
+set hidden3d
+set parametric
+set angles degrees
+set samples 128, 128
+set isosamples 25, 25
+set mapping spherical
+set dummy u, v
+set urange [-90:90]
+set vrange [0:360]
+
+frames = 180
+rotation_increment = 2
+time = 0
+angle = 65
+scale = 1.05
+zscale = 2.2
+
+# Plot the globe surface
+splot x(u, v), y(u, v), z(u, v) with lines lc rgb 'blue' notitle, \
+      'world.dat' with lines lc rgb 'green' notitle
+
+do for [i = 1:frames] {
+    time = time + rotation_increment
+    set view angle, time, scale, zscale
+    replot
+}
