@@ -4,3 +4,6 @@
 4. Enjoy! (Optional)
 
 ![alt globe](https://github.com/ganzuul/globekitty/blob/main/Screenshot_20250324_221008.png?raw=true)
+
+Higer resolution map files like in the image here:
+https://gnuplotting.org/plotting-the-world-revisited/index.html
