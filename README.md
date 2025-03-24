@@ -7,3 +7,8 @@
 
 Higer resolution map files like in the image here:
 https://gnuplotting.org/plotting-the-world-revisited/index.html
+
+Kitty window split and resize commands:
+Ctrl+Shift+Enter
+Ctrl+Shift+l
+Ctrl+Shift+r
